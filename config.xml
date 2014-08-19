@@ -23,6 +23,7 @@ Hari Krishna
     <preference name="android-installLocation" value="auto" />
     <preference name="BackgroundColor" value="0xffffffff "/>
     <preference name="KeepRunning" value="true"/>
+    
     <icon src="res/icon/phones.jpg" gap:platform="android" width="72" height="72" />
    
     <gap:splash src="res/screen/phones.png" gap:platform="android" width="480" height="800" />
