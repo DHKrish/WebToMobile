@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+    <head>
+        <title>Step6 Links and Images</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script src="js/angular.min.js"></script>
+        <style>
+            .phones {
+  list-style: none;
+}
+
+.thumb {
+  float: left;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  height: 100px;
+  width: 100px;
+}
+
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Side bar -->
+                <div class="col-md-2">
+                    Search: <input ng-model="query"/> <br/>
+                    Sort by: <select ng-model="orderProp">
+    <option value="name">Alphabetical</option>
+    <option value="age">Newest</option>
+  </select>
+                </div>
+                <!-- Body Content -->
+                <div class="col-md-10">
+                    <ul class="phones">
+                        <li ng-repeat="phone in phones | filter: query |orderBy:orderProp" class="thumbnail">
+                            <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"/></a>
+                            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                            <p>{{phone.snippet}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var phonecatApp = angular.module("phonecatApp",[]);
+            phonecatApp.controller('PhoneListCtrl', function($scope, $http) {
+                $http.get('phones/phones.json').success(function(data) {
+                    $scope.phones = data;
+                });
+        $scope.orderProp = 'age';
+            });
+        </script>
+    </body>
+</html>

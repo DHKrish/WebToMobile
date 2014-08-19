@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Hybrid Mobile Application Development</title>
+	<link rel="stylesheet"  href="css/jquery.mobile.min.css">
+	<style>
+		#homeBanner {
+			width: 100%;
+		}
+		.center {
+			text-align: center;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		.banner {
+			display:block;
+			width: 100%;
+		}
+		#qrcode {
+			display:block;	
+			margin-left: auto;
+			margin-right:auto;
+		}
+		#map2 {
+			margin-left: auto;
+			margin-right:auto;
+			width: 320px;
+			height: 320px;  
+		}
+	</style>
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/jquery.mobile.min.js"></script>
+	<script src="js/leaflet.js"></script>
+	<script src="js/app.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="barcodescanner.js"></script>
+</head>
+	
+<body>
+<div id="homeScreen" data-role="page">
+	<img src="imgs/app_banner_1.png" class="banner" />
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+			<li><a href="#services" >Services</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#">Our Clients</a></li>
+			<li><a href="#ContactUs">ContactUs</a></li>
+
+		</ul>
+		<div class="ui-grid-a center">
+    		<div class="ui-block-a">
+				<a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+			</div>
+    		<div class="ui-block-b">
+				<a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Map</a>
+			</div>
+		</div>
+        </div>
+        <footer data-role="footer">
+        <div class="ui-grid-a center ">
+				<a href="#devScreen"><img src="imgs/developer.jpg"></a>
+        </div>
+        </footer>	
+</div>
+<div id="services" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HMD</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content">
+		<h1 class="center">Services</h1>
+		<ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+			<li><a href="#enterprise"><img src="imgs/Westhoff_thumb.png">
+				<h2>ENTERPRISE</h2></a>
+			</li>
+			<li><a href="#"><img src="imgs/101733188_thumb.png">
+				<h2>INNOVATION STRATEGY</h2></a>
+			</li>
+			<li><a href="#"><img src="imgs/106588354_thumb.png">
+				<h2>USER EXPERIENCE</h2></a>
+			</li>
+			<li><a href="#"><img src="imgs/924520721_thumb.png">
+				<h2>APP MARKETING</h2></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="enterprise" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HMD</h1>
+		<a href="#services" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+        <a href="#homeScreen" class="ui-btn ui-icon-home ui-btn-icon-notext ui-btn-right ui-nodisc-icon ui-alt-icon">Home</a>
+	</header>
+	<div data-role="content">
+		<h1 class="center">ENTERPRISE</h1>
+		<ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>Mobility</h2>
+                <p>  Whether you’re crafting your mobile roadmap or developing enterprise apps, we can help. Sourcebits has the expertise to guide your mobile enterprise strategy and deliver secure, stable, scalable apps</p>     </a>
+			</li>
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>Cloud</h2>
+                <p>  We’re well versed in creating performant backends that drive everything from mobile data visualization applications to scalable solutions for video streaming</p></a>
+			</li>
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>Security</h2>
+                <p>  We deliver highly customized enterprise security solutions that help cut costs on redundant software, improve processes, and make your security initiatives more efficient.
+</p></a>
+			</li>
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>Cross-Platform</h2>
+                <p>Cross-platform means much more than just a different OS or screen size. Cross-platform means true mobility, with consistent user experiences across all areas.
+</p></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="portfolio" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HMD</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content">
+		<h1 class="center"></h1>
+		<ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>ENTERPRISE MOBILE</h2>
+				<p> </p></a>
+			</li>
+			<li><a href="#"><img src="imgs/Vision.png">
+				<h2>CONSUMER MOBILE</h2>
+				<p> </p></a>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+	
+<div id="mapScreen" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HMD</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content">
+		<h2 class="center">Hybrid Mobile Application Development</h2>
+		<p class="center">Vijayawada,    123456</p>
+		<div id="map2"><img src="imgs/map.png" /></div>
+	</div>
+</div>
+    
+    <div id="devScreen" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>Krish profile</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content">
+       <div class="center"> <img height="150" width="150" src="imgs/krish.jpg" /></div>
+		<h2 class="center">D Hari Krishna</h2>
+		<p class="center">+91 8179494949</p>
+        <p class="center">hari.krishna595@gmail.com</p>
+	</div>
+</div>
+
+<div id="ContactUs" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HybridMobile</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content">
+		<h3 class="center">ADDRESS..........</h3>
+		<p class="center">EMAIL and Contact Numbers</p>
+	</div>
+</div>
+
+<div id="aboutScreen" data-role="page">
+	<header data-role="header" data-position="fixed" data-id="appHeader">
+		<h1>HMD</h1>
+		<a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+	</header>
+	<div data-role="content" style="text-align:justify">
+		<h2 class="center">HybridMobileAppDevelopment</h2>
+		<h3 class="center">Creating the best mobile apps...</h3>
+		<img class="center banner" src="imgs/Buildings.png" />
+		<p >Founded in 2013, HMD began as a mobile application development firm, and has since created hundreds of apps serving a wide range of interests and industries. In the process, we have developed deep expertise and a consultative-driven approach to providing end-to-end enterprise technology solutions. Guided by our strong content background and ability to create engaging UI/UX, we work with our clients to build robust, award-winning web, mobile and social media solutions..</p>
+
+		<p>We have leveraged our deep experience and entrepreneurial history to partner with innovative startups, together creating state-of-the-art digital products and bringing fresh ideas and INVESTMENT to the mobile space. Several of our clients and partners have been named among the top "must-watch" digitally disruptive enterprises..</p>
+
+		<p>We are currently a center-of-excellence for many of our long-term enterprise clients. Often acting as an extension of their development teams, we have built a flexible, quick-to-scale delivery team with a unique blend of process-centric talent management. With both our enterprise and our startup clients, we provide a strategic technology partnership that brings to the table our wealth of experience in heavy data technologies, along with nimble, inventive solutions.</p>
+		<p class="center">Vijayawada,  123456</p>
+	</div>
+</div>
+	<!--
+	Admission
+	Directions
+	Parking
+	Hours
+	Volunteer
+	-->
+</body>
+</html>
