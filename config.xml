@@ -25,7 +25,7 @@ Hari Krishna
     <preference name="KeepRunning" value="true"/>
     <icon src="res/icon/phones.jpg" gap:platform="android" width="72" height="72" />
    
-    <gap:splash src="res/screen/phones.jpg" gap:platform="android" width="640" height="960" />
+    <gap:splash src="res/screen/phones.png" gap:platform="android" width="480" height="800" />
     
    
     <feature name="http://api.phonegap.com/1.0/network"/>
